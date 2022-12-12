@@ -4,9 +4,9 @@ cu  := $(shell find src -name "*.cu")
 cuo := $(patsubst src/%.cu,objs/%.cuo,$(cu))
 
 
-include_paths := /usr/local/cuda-11/include 
+include_paths := /usr/local/cuda-11.0/targets/x86_64-linux/include/
 
-library_paths := /usr/local/cuda-11/lib64
+library_paths := /usr/local/cuda-11.0/targets/x86_64-linux/lib/
 
 link_library  := cudart  cublas \
                  pthread
@@ -29,7 +29,7 @@ objs/%.cuo : src/%.cu
 
 workspace/exec : $(cuo)
 	@echo Linking $@
-	@mkdir -p $($@)
+	@mkdir -p $(dir $@)
 	@g++ $^ -o $@ $(linking_options)
 
 run : workspace/exec

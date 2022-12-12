@@ -3,7 +3,7 @@
 # CUDA 编程结构
 
 
-CUDA 编程模型提供了一个计算机架构抽象作为应用程序和其可用硬件之间的桥梁。通信抽象（Communication Abstraction）是程序与编程模型实现之间的分界线，它通过专业的硬件原语和操作系统的编译器或库来实现。
+CUDA 编程模型提供了一个计算机架构抽象作为应用程序和其可用硬件之间的桥梁。通信抽象（Communication Abstraction）是程序与编程模型实现之间的分界线，它通过专业的`硬件原语`和`操作系统的编译器`或`库`来实现。
 
 <div align=center>
     <img src="imgs/2-1.png" width=500>

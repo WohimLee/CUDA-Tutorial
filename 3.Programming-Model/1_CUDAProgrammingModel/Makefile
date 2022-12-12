@@ -1,7 +1,8 @@
 
+project := 
 
 cu  := $(shell find src -name "*.cu")
-cuo := $(patsubst src/%.cu,objs/%.cuo,$(cu))
+cuo := $(patsubst src/%.cu,objs/%.cu.o,$(cu))
 
 
 include_paths := /usr/local/cuda-11/include 
@@ -29,7 +30,7 @@ objs/%.cuo : src/%.cu
 
 workspace/exec : $(cuo)
 	@echo Linking $@
-	@mkdir -p $(dir $@)
+	@mkdir -p $($@)
 	@g++ $^ -o $@ $(linking_options)
 
 run : workspace/exec
