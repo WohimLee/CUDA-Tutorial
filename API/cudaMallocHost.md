@@ -1,0 +1,10 @@
+&emsp;
+# cudaMallocHost
+
+
+
+
+&emsp;
+# cudaFreeHost
+
+

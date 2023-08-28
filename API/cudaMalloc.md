@@ -1,0 +1,9 @@
+&emsp;
+# cudaMalloc
+
+
+
+&emsp;
+# cudaFree
+
+
